@@ -1,6 +1,5 @@
 <template>
   <q-page class="flex flex-center">
-    {{ $t("infoPageAimTitle") }}
     <img
       alt="Quasar logo"
       src="~assets/quasar-logo-vertical.svg"
