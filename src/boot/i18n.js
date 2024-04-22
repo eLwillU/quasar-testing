@@ -1,5 +1,5 @@
 import { boot } from "quasar/wrappers";
-
+import { createI18n } from "vue-i18n";
 export default boot(({ app }) => {
   // Create i18n instance with options
   const i18n = createI18n({
