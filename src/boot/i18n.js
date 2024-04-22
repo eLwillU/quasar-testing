@@ -1,19 +1,23 @@
 import { boot } from "quasar/wrappers";
-import DE from "../i18n/DE.json";
-import FR from "../i18n/FR.json";
-import { userStore } from "stores/store";
-
-const store = userStore();
 
 export default boot(({ app }) => {
   // Create i18n instance with options
-  const i18n = setI18n({
-    locale: "de",
+  const i18n = createI18n({
+    locale: "ja",
+    fallbackLocale: "en",
     messages: {
-      fr: FR,
-      de: DE,
+      en: {
+        message: {
+          hello: "hello world",
+        },
+      },
+      ja: {
+        message: {
+          hello: "こんにちは、世界",
+        },
+      },
     },
   });
   // Set i18n instance on app
-  // app.use(i18n);
+  app.use(i18n);
 });
